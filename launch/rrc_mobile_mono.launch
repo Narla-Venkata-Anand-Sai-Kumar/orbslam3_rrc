@@ -1,11 +1,10 @@
-<!--Monocular using mobile camera of Realme mobile phone./>
 <launch>
     <param name="use_sim_time" value="false" />
 
     <!-- Main node -->
     <node name="orb_slam3" pkg="orb_slam3_ros" type="ros_mono" output="screen">
         <!-- change the topics according to the dataset -->
-        <remap from="/camera/image_raw"    to="/camera/color/image_raw"/>
+        <!-- <remap from="/camera/image_raw"    to="/camera/color/image_raw"/> -->
 
         <!-- Parameters for original ORB-SLAM3 -->
         <param name="voc_file"      type="string" value="$(find orb_slam3_ros)/orb_slam3/Vocabulary/ORBvoc.txt.bin"/>
